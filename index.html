@@ -66,6 +66,12 @@ header nav a:hover{text-decoration:underline}
 img.photo{display:block;width:100%;height:auto;object-fit:cover;padding:0}
 
 .two{display:grid;grid-template-columns:1fr 1fr;gap:32px}
+.three{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+.part{margin:0}
+.part h3{margin-top:16px}
+.part p{color:var(--muted);font-size:1rem;margin:0}
+.slot{position:relative;overflow:hidden}
+.slot img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
 .card{background:var(--surface);border:1px solid var(--line);padding:32px;border-left:6px solid var(--accent)}
 .card ul{padding-left:1.1em;margin:0;color:var(--muted)}
 .card li{margin-bottom:.4em}
@@ -91,7 +97,7 @@ ol.steps span{color:var(--muted);font-size:1rem}
 footer{padding:24px;text-align:center;color:var(--muted);font-size:.9rem}
 
 @media (max-width:800px){
-  .hero-grid,.two,.facts{grid-template-columns:1fr}
+  .hero-grid,.two,.three,.facts{grid-template-columns:1fr}
   ol.steps{grid-template-columns:1fr 1fr}
   header nav{display:none}
   .btn.alt{margin:12px 0 0}
@@ -104,7 +110,7 @@ footer{padding:24px;text-align:center;color:var(--muted);font-size:.9rem}
     <svg viewBox="0 0 40 40" aria-hidden="true"><rect class="mk-bg" width="40" height="40" rx="6"/><path d="M9 31 20 9l11 22" fill="none" stroke="#f2b705" stroke-width="5"/><path d="M14 24h12" stroke="#f2b705" stroke-width="5"/></svg>
     A Technical
   </a>
-  <nav><a href="#services">Services</a><a href="#process">How we work</a><a href="#contact">Contact</a></nav>
+  <nav><a href="#services">Services</a><a href="#parts">Parts</a><a href="#process">How we work</a><a href="#contact">Contact</a></nav>
 </header>
 
 <main>
@@ -115,8 +121,8 @@ footer{padding:24px;text-align:center;color:var(--muted);font-size:.9rem}
       <p class="lead">Repair, installation and maintenance for food production machinery and CNC machines. 15 years of hands-on experience, on site or in the workshop.</p>
       <a class="btn" href="#contact">Contact us</a><a class="btn alt" href="#services">See what we do</a>
     </div>
-    <!-- Replace this div with: <img class="photo" src="hero.jpg" alt="Technician repairing a machine"> -->
-    <div class="photo" role="img" aria-label="Photo placeholder">Photo: technician at work</div>
+    <!-- Put a file named hero.jpg next to index.html and it appears here automatically -->
+    <div class="photo slot" role="img" aria-label="Photo placeholder">Photo: technician at work<img src="hero.jpg" alt="Technician at work" onerror="this.remove()"></div>
   </div>
 </section>
 
@@ -142,6 +148,28 @@ footer{padding:24px;text-align:center;color:var(--muted);font-size:.9rem}
           <li>Maintenance</li>
         </ul>
       </div>
+    </div>
+  </div>
+</section>
+
+<section id="parts">
+  <div class="wrap">
+    <h2>Custom parts and prototypes</h2>
+    <p>We manufacture custom parts and prototypes, and build machines from them. Here are some examples of our work.</p>
+    <!-- Photos: put part-a.jpg, part-b.jpg and part-c.jpg next to index.html and they appear automatically -->
+    <div class="three">
+      <figure class="part">
+        <div class="photo slot" role="img" aria-label="Photo placeholder">Photo: part A<img src="part-a.jpg" alt="Gripper for a giant piston" onerror="this.remove()"></div>
+        <h3>Giant piston gripper</h3>
+      </figure>
+      <figure class="part">
+        <div class="photo slot" role="img" aria-label="Photo placeholder">Photo: part B<img src="part-b.jpg" alt="Scraper blade" onerror="this.remove()"></div>
+        <h3>Scraper blade</h3>
+      </figure>
+      <figure class="part">
+        <div class="photo slot" role="img" aria-label="Photo placeholder">Photo: part C<img src="part-c.jpg" alt="Vertical drizzle adapter" onerror="this.remove()"></div>
+        <h3>Vertical drizzle adapter</h3>
+      </figure>
     </div>
   </div>
 </section>
