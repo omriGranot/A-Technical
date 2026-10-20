@@ -68,6 +68,8 @@ img.photo{display:block;width:100%;height:auto;object-fit:cover;padding:0}
 .two{display:grid;grid-template-columns:1fr 1fr;gap:32px}
 .three{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
 .part{margin:0}
+.four{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.four .photo{aspect-ratio:1/1}
 .part h3{margin-top:16px}
 .part p{color:var(--muted);font-size:1rem;margin:0}
 .slot{position:relative;overflow:hidden}
@@ -98,7 +100,7 @@ footer{padding:24px;text-align:center;color:var(--muted);font-size:.9rem}
 
 @media (max-width:800px){
   .hero-grid,.two,.three,.facts{grid-template-columns:1fr}
-  ol.steps{grid-template-columns:1fr 1fr}
+  ol.steps,.four{grid-template-columns:1fr 1fr}
   header nav{display:none}
   .btn.alt{margin:12px 0 0}
 }
@@ -161,15 +163,32 @@ footer{padding:24px;text-align:center;color:var(--muted);font-size:.9rem}
       <figure class="part">
         <div class="photo slot" role="img" aria-label="Photo placeholder">Photo: part A<img src="part-a.jpg" alt="Gripper for a giant piston" onerror="this.remove()"></div>
         <h3>Giant piston gripper</h3>
+        <p>Made to order.</p>
       </figure>
       <figure class="part">
         <div class="photo slot" role="img" aria-label="Photo placeholder">Photo: part B<img src="part-b.jpg" alt="Scraper blade" onerror="this.remove()"></div>
         <h3>Scraper blade</h3>
+        <p>Made to order.</p>
       </figure>
       <figure class="part">
         <div class="photo slot" role="img" aria-label="Photo placeholder">Photo: part C<img src="part-c.jpg" alt="Vertical drizzle adapter" onerror="this.remove()"></div>
         <h3>Vertical drizzle adapter</h3>
+        <p>Made to order.</p>
       </figure>
+    </div>
+  </div>
+</section>
+
+<section id="gears">
+  <div class="wrap">
+    <h2>Gears and embossing systems</h2>
+    <p>Examples of our work.</p>
+    <!-- Photos: put work-1.jpg to work-4.jpg next to index.html and they appear automatically -->
+    <div class="four">
+      <div class="photo slot" role="img" aria-label="Photo placeholder">Photo 1<img src="work-1.jpg" alt="Gears and embossing systems, example 1" onerror="this.remove()"></div>
+      <div class="photo slot" role="img" aria-label="Photo placeholder">Photo 2<img src="work-2.jpg" alt="Gears and embossing systems, example 2" onerror="this.remove()"></div>
+      <div class="photo slot" role="img" aria-label="Photo placeholder">Photo 3<img src="work-3.jpg" alt="Gears and embossing systems, example 3" onerror="this.remove()"></div>
+      <div class="photo slot" role="img" aria-label="Photo placeholder">Photo 4<img src="work-4.jpg" alt="Gears and embossing systems, example 4" onerror="this.remove()"></div>
     </div>
   </div>
 </section>
